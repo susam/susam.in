@@ -1,0 +1,76 @@
+<!-- title: Plotting Heart with Equations -->
+<!-- tag: mathematics -->
+<!-- import: tex.js -->
+<h2>Mathematical Valentine</h2>
+
+<p>
+It's Valentine's Day. It's that time of the year when many math geeks
+put their skills to creative use by drawing hearts with mathematical
+equations. For example, see this <a
+href="https://www.reddit.com/r/math/comments/1xwuv3/a_mathematical_valentine/">Mathematical
+Valentine on Reddit</a>. One of the popular ways of plotting a heart I
+have seen discussed on the Internet is plotting a cardoid. For example,
+see <a
+href="https://www.reddit.com/r/math/comments/1xwuv3/a_mathematical_valentine/cffdxt9/">this
+comment</a> by on the same thread.
+</p>
+
+<p>
+A cardoid is a curve traced by a point on the perimeter of a circle that
+rolls around a fixed circle of the same radius. See this <a
+href="https://en.wikipedia.org/wiki/Cardioid">Wikipedia article on
+cardiod</a> for more details about it. Here is how it looks:
+</p>
+
+<figure class="soft">
+  <img src="../../files/blog/heart-cardoid.png" alt="Graph of cardoid">
+  <figcaption>
+    Graph of the equations
+    \( x(\varphi) = 2a (1 - \cos\varphi) \cos \varphi, \)
+    &nbsp;
+    \( y(\varphi) = 2a (1 - \cos\varphi) \sin \varphi, \)
+    where \( 0 \le \varphi \lt 2\pi \)
+  </figcaption>
+</figure>
+
+<p>
+In fact, the cardoid is named so due to its heart-like shape. However, I
+wanted something that resembles the heart in playing cards more than it
+resembles a cardoid, so I plotted a simpler heart for <a
+href="https://sunainapai.in/">my girlfriend</a>. This simpler heart is
+composed of two simple curves:
+
+\begin{align*}
+y & = \sqrt{1 - |x|} \sqrt{|x|}, \\
+y & = -\frac{3}{2} \sqrt{1 - \sqrt{|x|}}.
+\end{align*}
+</p>
+
+<p>
+Here is what the graph plot looks like: <a
+href="https://raw.githubusercontent.com/susam/heart/master/heart-2014-02-14.png">heart-2014-02-14.png</a>.
+Here is the source code for the above plot: <a
+href="https://github.com/susam/heart/blob/master/heart.py">heart.py</a>.
+</p>
+
+<p>
+In this post, I'll describe how I arrived at the two equations above.
+</p>
+
+
+<h2>Semicircles</h2>
+
+<p>
+We start with a circle of radius \( \frac{1}{2} \) centred at \(
+\left( \frac{1}{2}, 0 \right) \) and derive its equation:
+
+\begin{align*}
+  & \left( x - \frac{1}{2} \right)^2 + y^2 = \left( \frac{1}{2} \right)^2 \\
+  & \iff x^2 - x + y^2 = 0 \\
+  & \iff y^2 = x(1 - x).
+\end{align*}
+</p>
+
+<p>
+Here is 
+</p>
